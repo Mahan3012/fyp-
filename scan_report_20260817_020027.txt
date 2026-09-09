@@ -1,0 +1,15 @@
+VULNERABILITY ASSESSMENT REPORT
+============================================================
+
+Target: https://nust.edu.pk
+Date: 2026-08-17 02:00:27.556932
+Findings: 2
+
+1. [Low] Missing Security Header: X-XSS-Protection
+   Category: Security Headers
+   Fix: Add X-XSS-Protection header
+--------------------------------------------------
+2. [Low] Server Version Disclosure
+   Category: Information Disclosure
+   Fix: Hide server version
+--------------------------------------------------

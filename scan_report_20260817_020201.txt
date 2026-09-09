@@ -1,0 +1,35 @@
+VULNERABILITY ASSESSMENT REPORT
+============================================================
+
+Target: https://smiu.edu.pk
+Date: 2026-08-17 02:02:01.050548
+Findings: 7
+
+1. [High] Missing Security Header: Strict-Transport-Security
+   Category: Security Headers
+   Fix: Add Strict-Transport-Security header
+--------------------------------------------------
+2. [High] Missing Security Header: Content-Security-Policy
+   Category: Security Headers
+   Fix: Add Content-Security-Policy header
+--------------------------------------------------
+3. [Medium] Missing Security Header: X-Frame-Options
+   Category: Security Headers
+   Fix: Add X-Frame-Options header
+--------------------------------------------------
+4. [Medium] Missing Security Header: X-Content-Type-Options
+   Category: Security Headers
+   Fix: Add X-Content-Type-Options header
+--------------------------------------------------
+5. [Low] Missing Security Header: X-XSS-Protection
+   Category: Security Headers
+   Fix: Add X-XSS-Protection header
+--------------------------------------------------
+6. [Low] Missing Security Header: Referrer-Policy
+   Category: Security Headers
+   Fix: Add Referrer-Policy header
+--------------------------------------------------
+7. [Low] Server Version Disclosure
+   Category: Information Disclosure
+   Fix: Hide server version
+--------------------------------------------------

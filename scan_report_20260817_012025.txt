@@ -1,0 +1,33 @@
+VULNERABILITY SCAN REPORT
+Target: https://smiu.edu.pk
+Date: 2026-08-17 01:20:25.777944
+Findings: 7
+
+1. [High] Missing Security Header: Strict-Transport-Security
+   Category: Security Headers
+   Fix: Add 'Strict-Transport-Security' to web server configuration
+
+2. [Medium] Missing Security Header: X-Content-Type-Options
+   Category: Security Headers
+   Fix: Add 'X-Content-Type-Options' to web server configuration
+
+3. [High] Missing Security Header: Content-Security-Policy
+   Category: Security Headers
+   Fix: Add 'Content-Security-Policy' to web server configuration
+
+4. [Low] Missing Security Header: X-XSS-Protection
+   Category: Security Headers
+   Fix: Add 'X-XSS-Protection' to web server configuration
+
+5. [Low] Missing Security Header: Referrer-Policy
+   Category: Security Headers
+   Fix: Add 'Referrer-Policy' to web server configuration
+
+6. [Low] Server Version Disclosure
+   Category: Information Disclosure
+   Fix: Hide server version information
+
+7. [Low] Exposed Email Addresses (1)
+   Category: Information Disclosure
+   Fix: Use contact forms instead of exposing emails
+

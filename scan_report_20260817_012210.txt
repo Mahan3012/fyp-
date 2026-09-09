@@ -1,0 +1,33 @@
+VULNERABILITY SCAN REPORT
+Target: https://nust.edu.pk
+Date: 2026-08-17 01:22:10.471188
+Findings: 7
+
+1. [Medium] Missing Security Header: X-Frame-Options
+   Category: Security Headers
+   Fix: Add 'X-Frame-Options' to web server configuration
+
+2. [High] Missing Security Header: Content-Security-Policy
+   Category: Security Headers
+   Fix: Add 'Content-Security-Policy' to web server configuration
+
+3. [Low] Missing Security Header: X-XSS-Protection
+   Category: Security Headers
+   Fix: Add 'X-XSS-Protection' to web server configuration
+
+4. [Low] Missing Security Header: Referrer-Policy
+   Category: Security Headers
+   Fix: Add 'Referrer-Policy' to web server configuration
+
+5. [Low] Server Version Disclosure
+   Category: Information Disclosure
+   Fix: Hide server version information
+
+6. [Low] Technology Disclosure
+   Category: Information Disclosure
+   Fix: Remove X-Powered-By header
+
+7. [High] Exposed Directory: /admin
+   Category: Information Disclosure
+   Fix: Restrict access to this directory
+

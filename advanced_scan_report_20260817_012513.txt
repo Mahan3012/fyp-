@@ -1,0 +1,81 @@
+============================================================
+ADVANCED VULNERABILITY ASSESSMENT REPORT
+============================================================
+
+Target: https://smiu.edu.pk
+Scan Date: 2026-08-17 01:25:13.988567
+Total Findings: 9
+HEC Compliance: 20.0%
+
+1. [High] Missing Security Header: Strict-Transport-Security
+   CVSS Score: 8.1
+   Category: Security Headers
+   Description: Protects against protocol downgrade attacks and cookie hijacking
+   Remediation: Add 'Strict-Transport-Security' to web server configuration
+   Cost Tier: Free
+   Budget (PKR): 0
+--------------------------------------------------
+2. [High] Missing Security Header: Content-Security-Policy
+   CVSS Score: 8.1
+   Category: Security Headers
+   Description: Prevents XSS, clickjacking, and other code injection attacks
+   Remediation: Add 'Content-Security-Policy' to web server configuration
+   Cost Tier: Low
+   Budget (PKR): 5000
+--------------------------------------------------
+3. [Medium] Missing Security Header: X-Content-Type-Options
+   CVSS Score: 5.4
+   Category: Security Headers
+   Description: Prevents MIME type sniffing
+   Remediation: Add 'X-Content-Type-Options' to web server configuration
+   Cost Tier: Free
+   Budget (PKR): 0
+--------------------------------------------------
+4. [Low] Missing Security Header: X-XSS-Protection
+   CVSS Score: 3.1
+   Category: Security Headers
+   Description: Enables browser XSS filter
+   Remediation: Add 'X-XSS-Protection' to web server configuration
+   Cost Tier: Medium
+   Budget (PKR): 25000
+--------------------------------------------------
+5. [Low] Missing Security Header: Referrer-Policy
+   CVSS Score: 3.1
+   Category: Security Headers
+   Description: Controls referrer information leakage
+   Remediation: Add 'Referrer-Policy' to web server configuration
+   Cost Tier: Medium
+   Budget (PKR): 25000
+--------------------------------------------------
+6. [Low] Missing Security Header: Permissions-Policy
+   CVSS Score: 3.1
+   Category: Security Headers
+   Description: Controls browser features
+   Remediation: Add 'Permissions-Policy' to web server configuration
+   Cost Tier: Medium
+   Budget (PKR): 25000
+--------------------------------------------------
+7. [Low] Server Version Disclosure
+   CVSS Score: 3.1
+   Category: Information Disclosure
+   Description: Server reveals software version information
+   Remediation: Hide server version in configuration
+   Cost Tier: Free
+   Budget (PKR): 0
+--------------------------------------------------
+8. [High] No Rate Limiting Detected
+   CVSS Score: 8.1
+   Category: Authentication
+   Description: Login page lacks rate limiting protection
+   Remediation: Implement account lockout and CAPTCHA
+   Cost Tier: Medium
+   Budget (PKR): 25000
+--------------------------------------------------
+9. [Low] Email Address Exposure (1)
+   CVSS Score: 3.1
+   Category: Email Security
+   Description: Email addresses visible to scrapers
+   Remediation: Use contact forms
+   Cost Tier: Medium
+   Budget (PKR): 25000
+--------------------------------------------------

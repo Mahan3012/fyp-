@@ -1,0 +1,98 @@
+{
+  "target": "https://smiu.edu.pk",
+  "scan_date": "2026-08-17T01:25:13.991438",
+  "total_findings": 9,
+  "hec_compliance": 20.0,
+  "findings": [
+    {
+      "title": "Missing Security Header: Strict-Transport-Security",
+      "description": "Protects against protocol downgrade attacks and cookie hijacking",
+      "severity": "High",
+      "category": "Security Headers",
+      "evidence": "Header not found in response",
+      "remediation": "Add 'Strict-Transport-Security' to web server configuration",
+      "cvss_score": 8.1,
+      "timestamp": "2026-08-17T01:25:03.413520"
+    },
+    {
+      "title": "Missing Security Header: Content-Security-Policy",
+      "description": "Prevents XSS, clickjacking, and other code injection attacks",
+      "severity": "High",
+      "category": "Security Headers",
+      "evidence": "Header not found in response",
+      "remediation": "Add 'Content-Security-Policy' to web server configuration",
+      "cvss_score": 8.1,
+      "timestamp": "2026-08-17T01:25:03.414289"
+    },
+    {
+      "title": "Missing Security Header: X-Content-Type-Options",
+      "description": "Prevents MIME type sniffing",
+      "severity": "Medium",
+      "category": "Security Headers",
+      "evidence": "Header not found in response",
+      "remediation": "Add 'X-Content-Type-Options' to web server configuration",
+      "cvss_score": 5.4,
+      "timestamp": "2026-08-17T01:25:03.415489"
+    },
+    {
+      "title": "Missing Security Header: X-XSS-Protection",
+      "description": "Enables browser XSS filter",
+      "severity": "Low",
+      "category": "Security Headers",
+      "evidence": "Header not found in response",
+      "remediation": "Add 'X-XSS-Protection' to web server configuration",
+      "cvss_score": 3.1,
+      "timestamp": "2026-08-17T01:25:03.416060"
+    },
+    {
+      "title": "Missing Security Header: Referrer-Policy",
+      "description": "Controls referrer information leakage",
+      "severity": "Low",
+      "category": "Security Headers",
+      "evidence": "Header not found in response",
+      "remediation": "Add 'Referrer-Policy' to web server configuration",
+      "cvss_score": 3.1,
+      "timestamp": "2026-08-17T01:25:03.416936"
+    },
+    {
+      "title": "Missing Security Header: Permissions-Policy",
+      "description": "Controls browser features",
+      "severity": "Low",
+      "category": "Security Headers",
+      "evidence": "Header not found in response",
+      "remediation": "Add 'Permissions-Policy' to web server configuration",
+      "cvss_score": 3.1,
+      "timestamp": "2026-08-17T01:25:03.417617"
+    },
+    {
+      "title": "Server Version Disclosure",
+      "description": "Server reveals software version information",
+      "severity": "Low",
+      "category": "Information Disclosure",
+      "evidence": "Apache",
+      "remediation": "Hide server version in configuration",
+      "cvss_score": 3.1,
+      "timestamp": "2026-08-17T01:25:03.921686"
+    },
+    {
+      "title": "No Rate Limiting Detected",
+      "description": "Login page lacks rate limiting protection",
+      "severity": "High",
+      "category": "Authentication",
+      "evidence": "No CAPTCHA or lockout indicators",
+      "remediation": "Implement account lockout and CAPTCHA",
+      "cvss_score": 8.1,
+      "timestamp": "2026-08-17T01:25:13.230742"
+    },
+    {
+      "title": "Email Address Exposure (1)",
+      "description": "Email addresses visible to scrapers",
+      "severity": "Low",
+      "category": "Email Security",
+      "evidence": "1 emails found",
+      "remediation": "Use contact forms",
+      "cvss_score": 3.1,
+      "timestamp": "2026-08-17T01:25:13.562943"
+    }
+  ]
+}

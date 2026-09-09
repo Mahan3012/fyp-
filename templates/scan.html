@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Scan</title>
+    <style>
+        body { font-family: Arial; background: #f4f6f9; }
+        .container { max-width: 600px; margin: 50px auto; padding: 30px; background: white; border-radius: 10px; }
+        h2 { text-align: center; }
+        input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; }
+        button { width: 100%; padding: 12px; background: #667eea; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Start New Vulnerability Scan</h2>
+        <form method="POST">
+            <input type="text" name="target_url" placeholder="Enter URL (e.g., https://smiu.edu.pk)" required>
+            <button type="submit">Start Scan</button>
+        </form>
+        <p style="text-align:center; margin-top:20px;"><a href="/dashboard">Back to Dashboard</a></p>
+    </div>
+</body>
+</html>

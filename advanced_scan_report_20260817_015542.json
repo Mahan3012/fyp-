@@ -1,0 +1,118 @@
+{
+  "target": "https://nust.edu.pk",
+  "scan_date": "2026-08-17T01:55:42.366839",
+  "total_findings": 11,
+  "hec_compliance": 40.0,
+  "findings": [
+    {
+      "title": "Missing Security Header: Content-Security-Policy",
+      "description": "Prevents XSS, clickjacking, and other code injection attacks",
+      "severity": "High",
+      "category": "Security Headers",
+      "evidence": "Header not found in response",
+      "remediation": "Add 'Content-Security-Policy' to web server configuration",
+      "cvss_score": 8.1,
+      "timestamp": "2026-08-17T01:55:32.431675"
+    },
+    {
+      "title": "Missing Security Header: X-Frame-Options",
+      "description": "Protects against clickjacking attacks",
+      "severity": "Medium",
+      "category": "Security Headers",
+      "evidence": "Header not found in response",
+      "remediation": "Add 'X-Frame-Options' to web server configuration",
+      "cvss_score": 5.4,
+      "timestamp": "2026-08-17T01:55:32.433413"
+    },
+    {
+      "title": "Missing Security Header: X-XSS-Protection",
+      "description": "Enables browser XSS filter",
+      "severity": "Low",
+      "category": "Security Headers",
+      "evidence": "Header not found in response",
+      "remediation": "Add 'X-XSS-Protection' to web server configuration",
+      "cvss_score": 3.1,
+      "timestamp": "2026-08-17T01:55:32.437762"
+    },
+    {
+      "title": "Missing Security Header: Referrer-Policy",
+      "description": "Controls referrer information leakage",
+      "severity": "Low",
+      "category": "Security Headers",
+      "evidence": "Header not found in response",
+      "remediation": "Add 'Referrer-Policy' to web server configuration",
+      "cvss_score": 3.1,
+      "timestamp": "2026-08-17T01:55:32.439270"
+    },
+    {
+      "title": "Missing Security Header: Permissions-Policy",
+      "description": "Controls browser features",
+      "severity": "Low",
+      "category": "Security Headers",
+      "evidence": "Header not found in response",
+      "remediation": "Add 'Permissions-Policy' to web server configuration",
+      "cvss_score": 3.1,
+      "timestamp": "2026-08-17T01:55:32.441439"
+    },
+    {
+      "title": "Server Version Disclosure",
+      "description": "Server reveals software version information",
+      "severity": "Low",
+      "category": "Information Disclosure",
+      "evidence": "cloudflare",
+      "remediation": "Hide server version in configuration",
+      "cvss_score": 3.1,
+      "timestamp": "2026-08-17T01:55:32.831767"
+    },
+    {
+      "title": "Technology Stack Disclosure",
+      "description": "Technology stack is revealed",
+      "severity": "Low",
+      "category": "Information Disclosure",
+      "evidence": "ASP.NET",
+      "remediation": "Remove X-Powered-By header",
+      "cvss_score": 3.1,
+      "timestamp": "2026-08-17T01:55:32.832393"
+    },
+    {
+      "title": "Exposed Directory: /admin",
+      "description": "Directory /admin is publicly accessible",
+      "severity": "High",
+      "category": "Information Disclosure",
+      "evidence": "HTTP 200 from https://nust.edu.pk/admin",
+      "remediation": "Restrict access to this directory",
+      "cvss_score": 8.1,
+      "timestamp": "2026-08-17T01:55:34.080684"
+    },
+    {
+      "title": "Exposed Sensitive File: /robots.txt",
+      "description": "Sensitive file /robots.txt is publicly accessible",
+      "severity": "Critical",
+      "category": "Information Disclosure",
+      "evidence": "HTTP 200 from https://nust.edu.pk/robots.txt",
+      "remediation": "Remove file from web root immediately",
+      "cvss_score": 9.0,
+      "timestamp": "2026-08-17T01:55:39.084378"
+    },
+    {
+      "title": "Exposed Sensitive File: /sitemap.xml",
+      "description": "Sensitive file /sitemap.xml is publicly accessible",
+      "severity": "Critical",
+      "category": "Information Disclosure",
+      "evidence": "HTTP 200 from https://nust.edu.pk/sitemap.xml",
+      "remediation": "Remove file from web root immediately",
+      "cvss_score": 9.0,
+      "timestamp": "2026-08-17T01:55:40.863920"
+    },
+    {
+      "title": "No Rate Limiting Detected",
+      "description": "Login page lacks rate limiting protection",
+      "severity": "High",
+      "category": "Authentication",
+      "evidence": "No CAPTCHA or lockout indicators",
+      "remediation": "Implement account lockout and CAPTCHA",
+      "cvss_score": 8.1,
+      "timestamp": "2026-08-17T01:55:41.500063"
+    }
+  ]
+}

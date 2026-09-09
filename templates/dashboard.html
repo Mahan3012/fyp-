@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        body { font-family: Arial; background: #f4f6f9; margin: 0; }
+        .nav { background: #2c3e50; padding: 15px; color: white; display: flex; justify-content: space-between; }
+        .nav a { color: white; margin-left: 20px; text-decoration: none; }
+        .container { max-width: 1000px; margin: 30px auto; padding: 20px; }
+        .card { background: white; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
+        .btn { display: inline-block; padding: 10px 20px; background: #3498db; color: white; text-decoration: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <h2>VAF Dashboard</h2>
+        <div>
+            <a href="/scan">New Scan</a>
+            <a href="/history">History</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <h2>Welcome, {{ user.username }}</h2>
+            <p>Total Scans: {{ total_scans }}</p>
+            <p>Total Findings: {{ total_findings }}</p>
+        </div>
+        <div class="card">
+            <h3>Recent Scans</h3>
+            <a href="/scan" class="btn">Start New Scan</a>
+            <table>
+                <tr>
+                    <th>Target</th>
+                    <th>Date</th>
+                    <th>Findings</th>
+                    <th>Action</th>
+                </tr>
+                {% for scan in recent_scans %}
+                <tr>
+                    <td>{{ scan.target_url }}</td>
+                    <td>{{ scan.scan_date.strftime('%Y-%m-%d %H:%M') }}</td>
+                    <td>{{ scan.total_findings }}</td>
+                    <td><a href="/scan/{{ scan.id }}">View</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</body>
+</html>

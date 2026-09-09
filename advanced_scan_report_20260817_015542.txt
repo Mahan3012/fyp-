@@ -1,0 +1,97 @@
+============================================================
+ADVANCED VULNERABILITY ASSESSMENT REPORT
+============================================================
+
+Target: https://nust.edu.pk
+Scan Date: 2026-08-17 01:55:42.364814
+Total Findings: 11
+HEC Compliance: 40.0%
+
+1. [High] Missing Security Header: Content-Security-Policy
+   CVSS Score: 8.1
+   Category: Security Headers
+   Description: Prevents XSS, clickjacking, and other code injection attacks
+   Remediation: Add 'Content-Security-Policy' to web server configuration
+   Cost Tier: Low
+   Budget (PKR): 5000
+--------------------------------------------------
+2. [Medium] Missing Security Header: X-Frame-Options
+   CVSS Score: 5.4
+   Category: Security Headers
+   Description: Protects against clickjacking attacks
+   Remediation: Add 'X-Frame-Options' to web server configuration
+   Cost Tier: Free
+   Budget (PKR): 0
+--------------------------------------------------
+3. [Low] Missing Security Header: X-XSS-Protection
+   CVSS Score: 3.1
+   Category: Security Headers
+   Description: Enables browser XSS filter
+   Remediation: Add 'X-XSS-Protection' to web server configuration
+   Cost Tier: Medium
+   Budget (PKR): 25000
+--------------------------------------------------
+4. [Low] Missing Security Header: Referrer-Policy
+   CVSS Score: 3.1
+   Category: Security Headers
+   Description: Controls referrer information leakage
+   Remediation: Add 'Referrer-Policy' to web server configuration
+   Cost Tier: Medium
+   Budget (PKR): 25000
+--------------------------------------------------
+5. [Low] Missing Security Header: Permissions-Policy
+   CVSS Score: 3.1
+   Category: Security Headers
+   Description: Controls browser features
+   Remediation: Add 'Permissions-Policy' to web server configuration
+   Cost Tier: Medium
+   Budget (PKR): 25000
+--------------------------------------------------
+6. [Low] Server Version Disclosure
+   CVSS Score: 3.1
+   Category: Information Disclosure
+   Description: Server reveals software version information
+   Remediation: Hide server version in configuration
+   Cost Tier: Free
+   Budget (PKR): 0
+--------------------------------------------------
+7. [Low] Technology Stack Disclosure
+   CVSS Score: 3.1
+   Category: Information Disclosure
+   Description: Technology stack is revealed
+   Remediation: Remove X-Powered-By header
+   Cost Tier: Medium
+   Budget (PKR): 25000
+--------------------------------------------------
+8. [High] Exposed Directory: /admin
+   CVSS Score: 8.1
+   Category: Information Disclosure
+   Description: Directory /admin is publicly accessible
+   Remediation: Restrict access to this directory
+   Cost Tier: Low
+   Budget (PKR): 3000
+--------------------------------------------------
+9. [Critical] Exposed Sensitive File: /robots.txt
+   CVSS Score: 9.0
+   Category: Information Disclosure
+   Description: Sensitive file /robots.txt is publicly accessible
+   Remediation: Remove file from web root immediately
+   Cost Tier: Medium
+   Budget (PKR): 25000
+--------------------------------------------------
+10. [Critical] Exposed Sensitive File: /sitemap.xml
+   CVSS Score: 9.0
+   Category: Information Disclosure
+   Description: Sensitive file /sitemap.xml is publicly accessible
+   Remediation: Remove file from web root immediately
+   Cost Tier: Medium
+   Budget (PKR): 25000
+--------------------------------------------------
+11. [High] No Rate Limiting Detected
+   CVSS Score: 8.1
+   Category: Authentication
+   Description: Login page lacks rate limiting protection
+   Remediation: Implement account lockout and CAPTCHA
+   Cost Tier: Medium
+   Budget (PKR): 25000
+--------------------------------------------------
